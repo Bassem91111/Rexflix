@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription - Rexflix</title>
+  <style>
+    /* RESET de base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #141414;
+      color: white;
+    }
+
+    /* Conteneur principal */
+    .container {
+      max-width: 450px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    /* Formulaire */
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #555;
+      background-color: #222;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #e50914;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #f40612;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer a {
+      color: #e50914;
+      text-decoration: none;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Conteneur principal -->
+  <div class="container">
+    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/09/Netflix_logo_2014.svg" alt="Logo Netflix">
+    <h2>Créez votre compte Rexflix</h2>
+    <form id="signupForm" action="#" method="POST">
+      <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+      <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+      <input type="password" id="password" name="password" placeholder="Choisissez un mot de passe" required>
+      <input type="submit" value="Commencer">
+    </form>
+
+    <!-- Message d'erreur si des champs sont manquants -->
+    <div class="error-message" id="errorMessage"></div>
+
+    <p class="footer">
+      Vous avez déjà un compte ? <a href="file:///C:/Users/bassemmnafeg/Documents/Rexflix/Page%20d'accueil/Connexion.html">Se connecter</a>
+    </p>
+  </div>
+
+  <script>
+    // Fonction de validation du formulaire
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Empêche la soumission du formulaire pour vérifier les champs
+
+      // Récupération des valeurs des champs
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const errorMessage = document.getElementById('errorMessage');
+
+      // Vérification que les champs ne sont pas vides
+      if (!name || !email || !password) {
+        errorMessage.textContent = "Tous les champs doivent être remplis.";
+      } else {
+        // Si tout est validé, redirection vers une autre page
+        errorMessage.textContent = ""; // Efface le message d'erreur
+        window.location.href = "file:///C:/Users/bassemmnafeg/Documents/Rexflix/Rexflix.html"; // Remplace "index.html" par l'URL vers laquelle tu veux rediriger après l'inscription
+      }
+    });
+  </script>
+
+</body>
+</html>

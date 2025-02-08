@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Se connecter - Rexflix</title>
+  <style>
+    /* RESET de base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #141414;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    /* Formulaire de connexion */
+    .login-form {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 5px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #333;
+      border-radius: 5px;
+      background-color: #333;
+      color: white;
+      font-size: 16px;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #e50914;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 3px;
+      margin-top: 10px;
+    }
+
+    .login-btn:hover {
+      background-color: #f40612;
+    }
+
+    .register-link {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .register-link a {
+      color: #e50914;
+      text-decoration: none;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Se connecter à Rexflix</h1>
+
+  <!-- Formulaire de connexion -->
+  <form class="login-form" action="file:///C:/Users/bassemmnafeg/Documents/Rexflix/Rexflix.html" method="POST">
+    <input type="email" class="input-field" placeholder="Adresse e-mail" required>
+    <input type="password" class="input-field" placeholder="Mot de passe" required>
+    <button type="submit" class="login-btn">Se connecter</button>
+  </form>
+
+  <!-- Lien pour inscription si l'utilisateur n'a pas de compte -->
+  <div class="register-link">
+    <p>Vous n'avez pas de compte ? <a href="file:///C:/Users/bassemmnafeg/Documents/Rexflix/Page%20d'accueil/Inscription.html">Inscrivez-vous ici</a></p>
+  </div>
+
+</body>
+</html>
